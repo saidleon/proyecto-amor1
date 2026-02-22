@@ -1,0 +1,111 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body{
+    overflow-x:hidden;
+    background: radial-gradient(circle at center, #0a0a2a, #000);
+    color:white;
+    text-align:center;
+}
+
+/* CANVAS */
+#canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* CONTENIDO */
+.contenido{
+    position:relative;
+    padding:80px 20px 150px 20px;
+    width:100%;
+    max-width:800px;
+    margin:auto;
+}
+
+/* TITULO */
+.titulo{
+    font-size:2.2rem;
+    color:#ff69b4;
+    text-shadow:0 0 15px pink;
+    margin-bottom:15px;
+    animation:latido 2s infinite;
+}
+
+/* SUBTITULO */
+.subtitulo{
+    font-size:1.1rem;
+    margin-bottom:30px;
+    color:#ffd1dc;
+}
+
+/* CARTA */
+.carta{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding:25px;
+    border-radius:20px;
+    line-height:1.8;
+    font-size:1rem;
+    box-shadow:0 0 25px rgba(255,105,180,0.5);
+    white-space:pre-line;
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+    opacity:0;
+    transform: translateY(40px);
+    transition:1.2s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform: translateY(0);
+}
+
+/* LATIDO */
+@keyframes latido{
+    0%{ transform:scale(1);}
+    50%{ transform:scale(1.05);}
+    100%{ transform:scale(1);}
+}
+
+/* MENSAJE FINAL RESPONSIVE */
+.mensaje-final{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#ff69b4;
+    text-shadow:0 0 20px pink;
+    animation:latido 1s infinite;
+    text-align:center;
+}
+
+/* 📱 AJUSTES SOLO PARA CELULAR */
+@media (max-width:600px){
+
+    .titulo{
+        font-size:1.6rem;
+    }
+
+    .subtitulo{
+        font-size:1rem;
+    }
+
+    .carta{
+        font-size:0.95rem;
+        padding:20px;
+    }
+
+}
